@@ -1,0 +1,26 @@
+<!-- Toolbar -->
+<mat-toolbar color="primary">
+    <mat-toolbar-row>
+      <button mat-button [matMenuTriggerFor]="menu">File</button>
+        <mat-menu #menu="matMenu" xPosition="after" >
+      <button mat-menu-item [matMenuTriggerFor]="type">New project</button>
+      <button mat-menu-item>Save project</button>
+      <button mat-menu-item>Open project</button>
+    </mat-menu> 
+    <mat-menu #type="matMenu" xPosition="after" >
+      <button mat-menu-item  [routerLink]="'/angular-cli'">Angular project</button>
+      <button mat-menu-item [routerLink]="'/react'">React project</button>
+      <button mat-menu-item [routerLink]="'/typescript'">Typescript project</button>
+      <button mat-menu-item [routerLink]="'/javascript'">Javascript project</button>
+      <button mat-menu-item [routerLink]="'/github'">Github project</button>
+
+    </mat-menu>
+  </mat-toolbar-row>
+  
+    
+  </mat-toolbar>
+  
+      <!-- <div class="spacer"></div> -->
+      
+  
+  <router-outlet></router-outlet>

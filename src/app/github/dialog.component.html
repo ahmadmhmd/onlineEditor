@@ -1,0 +1,14 @@
+ 
+ <div calss='dialog'>
+ <h1 mat-dialog-title>Enter your repository url</h1>
+<div mat-dialog-content>
+  <mat-form-field style="align-content: center;">
+    <mat-label >Link</mat-label>
+    <input matInput [(ngModel)]="data.project">
+  </mat-form-field>
+</div>
+<div mat-dialog-actions>
+  <button mat-button (click)="onNoClick()">No Thanks</button>
+  <button mat-button [mat-dialog-close]="data.project" cdkFocusInitial>Ok</button>
+</div>
+</div>
